@@ -1,0 +1,3 @@
+
+0(1) : error C5060: out can't be used with non-varying vNormal
+

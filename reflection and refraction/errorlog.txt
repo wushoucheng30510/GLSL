@@ -1,0 +1,4 @@
+
+0(30) : error C1503: undefined variable "Tx"
+0(30) : error C1503: undefined variable "Ty"
+

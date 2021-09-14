@@ -1,0 +1,56 @@
+##OpenGL GLIB
+
+Perspective 90
+LookAt 1 5 6   0 0 0  0 1 0
+
+Vertex   mountain.vert
+Fragment mountain.frag
+Program  mountain  \
+    uGradient_Noise <false> \
+    uA <1. 2. 5.>   \
+    uB <1. 2. 5.>   \
+    uThunder_on <false> \
+    uSeason <false>
+
+Texture2D 6 snow.bmp
+Texture2D 5 m3.bmp
+Texture2D 4 water.bmp
+QuadXZ 0. 5. 40 40
+
+
+
+Vertex   cloud.vert
+Fragment cloud.frag
+Program  cloud  \
+    uCloud <false>  \
+    uThunder_on <flase> 
+    
+
+Translate 0. 0. 0.
+Scale 10. 10. 10.
+Translate 0. 0.5 0.
+Obj cloud.obj
+
+
+Vertex   thunder.vert
+Fragment thunder.frag
+Program thunder \
+    uThunder_on <flase>
+
+
+Pushmatrix
+Translate 0. -0.3 0.
+Texture2D 2 thunder.bmp
+QuadXY 0. 0.5 40 40
+Popmatrix
+
+
+Vertex   ocean.vert
+Fragment ocean.frag
+Program  ocean  \
+
+Pushmatrix
+Texture2D 1 w2.bmp
+Translate 0. -0.7 0.
+QuadXZ 0. 5. 40 40
+Popmatrix

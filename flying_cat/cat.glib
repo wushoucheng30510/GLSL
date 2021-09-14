@@ -1,0 +1,53 @@
+##OpenGL GLIB
+Perspective 90
+LookAt -5 3 0 0 0 0 0 1 0
+
+Vertex cat.vert
+Fragment cat.frag
+Program Cat \
+	uStrip <false>
+
+pushmatrix
+Translate 0. -1. 0.
+//Rotate 180 0. 1. 0.
+//Torus 1. 0.5 20 40
+Obj catL.obj
+popmatrix
+
+Vertex wing.vert
+Fragment wing.frag
+Program wing \
+	uLight <flase>
+
+
+Translate 0. 1.6 0.
+Scale 0.07 0.07 0.07
+Rotate 90 0. 1. 0.
+Rotate 90 1. 0. 0.
+Texture2D  5  water.bmp
+Obj wing.obj
+
+
+Vertex eyer.vert
+Fragment eyer.frag
+Program eyer
+
+pushmatrix
+Translate 3.5 -27.8 -8.
+Rotate 90. 1. 0. 0.
+Color 1. 1. 1.
+Sphere 2 100 100
+popmatrix
+
+
+
+Vertex eyel.vert
+Fragment eyel.frag
+Program eyer
+
+pushmatrix
+Translate -3.5 -27.8 -8.
+Rotate 90. 1. 0. 0.
+Color 1. 1. 1.
+Sphere 2 100 100
+popmatrix
